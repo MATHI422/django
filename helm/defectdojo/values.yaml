@@ -131,6 +131,10 @@ monitoring:
 
 annotations: {}
 
+secrets:
+  # Add annotations for secret resources
+  annotations: {}
+
 # Components
 celery:
   broker: redis
@@ -237,6 +241,7 @@ django:
         memory: 256Mi
   nodeSelector: {}
   replicas: 1
+  strategy: {}
   tolerations: []
   uwsgi:
     livenessProbe:
